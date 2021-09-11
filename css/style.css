@@ -642,16 +642,16 @@ input {
         display: block;
         position: relative;
         /* right: 0; */
-        width: 30px;
+        width: 40px;
         height: 30px;
         z-index: 3;
     }
     .header__burger span {
         position: absolute;
-        background-color: #fff;
+        background-color: #171fe5;
         left: 0;
         width: 100%;
-        height: 2px;
+        height: 3px;
         top: 13px;
         transition: all .3s ease;
     }
@@ -661,10 +661,10 @@ input {
     .header__burger::before,
     .header__burger::after {
         content: '';
-        background-color: #fff;
+        background-color: #171fe5;
         position: absolute;
         width: 100%;
-        height: 2px;
+        height: 3px;
         left: 0;
         transition: all .3s ease;
     }
