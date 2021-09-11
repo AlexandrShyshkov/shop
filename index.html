@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -13,31 +13,36 @@
 </head>
 
 <body>
-    <div class="hero">
+    <div id="main" class="hero">
         <div class="container">
-            <div class="heder">
+            <div class="header">
                 <div class="header__logo">
                     <a href=""><img src="img/logo.svg" alt=""></a>
                 </div>
-                <ul class="header__menu">
-                    <li class="header__list"><a href="" class="header__link">Главная</a></li>
-                    <li class="header__list"><a href="" class="header__link">О нас</a></li>
-                    <li class="header__list"><a href="" class="header__link">Блог</a></li>
-                    <li class="header__list"><a href="" class="header__link">Контакты</a></li>
-                    <form action="#" class="header__search">
-                        <button type="submit"><img src="img/Vector.svg" alt=""></button>
-                        <input type="text" placeholder="Поиск">
-                        <a href=""><img class="search__img" src="img/cart.svg" alt=""></a>
+                <nav>
+                    <ul class="header__menu">
+                        <li class="header__list"><a href="" class="header__link">Главная</a></li>
+                        <li class="header__list"><a href="#special" class="header__link">О нас</a></li>
+                        <li class="header__list"><a href="#blog" class="header__link">Блог</a></li>
+                        <li class="header__list"><a href="" class="header__link">Контакты</a></li>
+                        <form action="#" class="header__search">
+                            <button type="submit"><img src="img/search.svg" alt=""></button>
+                            <input type="text" placeholder="Поиск">
+                            <a href=""><img class="search__img" src="img/cart.svg" alt=""></a>
 
-                    </form>
-                </ul>
+                        </form>
+                    </ul>
+                </nav>
+                <div class="header__burger">
+                    <span></span>
+                </div>
             </div>
             <div class="hero__content">
                 <div class="hero__info">
                     <span class="hero__subtitle">Trendy Collection</span>
                     <h1 class="hero__title">Shop For<br>What You Want</h1>
                     <p class="hero__text">Магазины - это необходимое место, куда люди ходят за необходимыми вещами. Шоппинг - это то, что любят </p>
-                    <a href="" class="hero__btn">Начать покупки</a>
+                    <a href="" class="hero__btn" data-modal="#room">Начать покупки</a>
                 </div>
                 <div class="hero__img">
                     <img src="img/hero_women.png" alt="">
@@ -46,19 +51,17 @@
         </div>
     </div>
     <div class="container">
+        <h2 class="slider__title">Шоппинг в Xpress - это весело!</h2>
         <div class="slider swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="slider__image"><img src="img/222.png" alt=""></div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider__image"><img src="img/111.png" alt=""></div>
+                    <div class="slider__image"><img src="img/444.png" alt=""></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="slider__image"><img src="img/333.png" alt=""></div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="slider__image"><img src="/mg/111.png" alt=""></div>
+                    <div class="slider__image"><img src="img/111.png" alt=""></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="slider__image"><img src="img/222.png" alt=""></div>
@@ -66,16 +69,18 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
+        <p class="slider__text">Тренды – это долгосрочные изменения. В повседневности мы сталкиваемся с трендами как с хаотическими явлениями, которые могут “зацепить” и потянуть за собой. Если бы мы могли сами прогнозировать появление новых трендов, то это бы дало нам неограниченные
+            возможности и перспективы в достижении успеха в своей нише, создании бизнеса и т. д.</p>
     </div>
-    <div class="arrival">
+    <div id="arrival" class="arrival">
         <div class="container">
             <div class="arrival__info">
                 <span class="arrival__title">Новое поступление</span>
-                <span class="arrival__text"><a href="">ПОСМОТРЕТЬ ВСЕ</a></span>
+                <span class="arrival__text"><a href="" data-modal="#room">ПОСМОТРЕТЬ ВСЕ</a></span>
             </div>
             <div class="arrival__wrapper">
                 <div class="arrival__img-main">
-                    <a href=""><img src="img/women1.jpg" alt=""></a>
+                    <a href=""><img class="arrival__img-first" src="img/women1.jpg" alt=""></a>
                 </div>
                 <div class="arrival__img">
                     <a href=""><img class="arrival__img-second" src="img/women2.jpg" alt=""></a>
@@ -90,7 +95,7 @@
         <h2 class="sell__title">Самые продаваемые товары</h2>
         <h3 class="sell__subtitle">Мы тоже считаем, что шопинг расслабляет, как и всякий раз, когда я слишком напряжен или <br> напрягся. Я часто хожу за покупками. </h3>
         <div class="sell-slider swiper-container">
-            <div class="swiper-wrapper">
+            <div class="sell-slider__wrapper swiper-wrapper">
                 <div class="swiper-slide"><img src="img/2.jpg" alt=""></div>
                 <div class="swiper-slide"><img src="img/3.jpg" alt=""></div>
                 <div class="swiper-slide"><img src="img/1.jpg" alt=""></div>
@@ -101,7 +106,7 @@
         </div>
     </div>
     <div class="container">
-        <h2 class="sell__title">Наша специальность</h2>
+        <h2 id="special" class="sell__title">Наша специальность</h2>
         <h3 class="sell__subtitle">Мы тоже считаем, что шоппинг расслабляет, как и всякий раз, когда я слишком напряжена или напряжена. Я часто иду за </h3>
         <div class="special">
             <div class="special__item">
@@ -124,7 +129,7 @@
     <div class="container">
         <div class="arrival__info">
             <span class="arrival__title">Наш лучший бренд </span>
-            <span class="arrival__text"><a href="">ПОСМОТРЕТЬ ВСЕ</a></span>
+            <span class="arrival__text"><a href="" data-modal="#brand">ПОСМОТРЕТЬ ВСЕ</a></span>
         </div>
     </div>
     <div class="info">
@@ -138,42 +143,66 @@
         </div>
     </div>
     <div class="container">
-        <div class="blog__wrapper">
-            <span class="arrival__title">Последние сообщения <br> в блоге</span>
+        <div id="blog" class="blog__wrapper">
+            <span class="arrival__title">Последняя публикация <br> в блоге</span>
             <span class="blog__text">Магазины - это важное место, куда люди идут <br> за покупками - одно из необходимых мест.</span>
         </div>
         <div class="blog__item">
             <div class="blog__body">
                 <div class="blog__img">
-                    <a href=""><img src="img/blog.png" alt=""></a>
+                    <a href="" data-modal="#more"><img src="img/blog.png" alt=""></a>
                 </div>
                 <div class="blog__info">
-                    <h3 class="text__title"><a href="">Духи Foog</a></h3>
-                    <p class="blog__text blog-info">Я тоже считаю, что шоппинг расслабляет, как и всякий раз, когда я становлюсь слишком напряженным или напряженным. Я часто хожу за покупками.</p>
-                    <span class="text__link"><a href="">УЗНАТЬ БОЛЬШЕ</a></span>
-                    <p class="text__time">Янв 17 2020</p>
+                    <div>
+                        <h3 class="text__title"><a href="" data-modal="#more">Духи Foog</a></h3>
+                    </div>
+                    <div>
+                        <p class="blog__text blog-info">Angel Food Eau de Cologne Demeter, выпущенный в 1997 году,классифицируется как аромат для женщин и принадлежит семействам Сладкие, Восточные и Гурманские. Angel Food Eau de Cologne входит в коллекцию Classic. </p>
+                    </div>
+                </div>
+                <div class="blog__bottom">
+                    <div><span class="text__link"><a href="" data-modal="#more">УЗНАТЬ БОЛЬШЕ</a></span></div>
+                    <div>
+                        <p class="text__time">Янв 17 2020</p>
+                    </div>
                 </div>
             </div>
             <div class="blog__body">
                 <div class="blog__img">
-                    <a href=""><img src="img/blog2.png" alt=""></a>
+                    <a href="" data-modal="#more2"><img src="img/blog2.png" alt=""></a>
                 </div>
                 <div class="blog__info">
-                    <h3 class="text__title"><a href="">Лосьон с белым мускусом</a></h3>
-                    <p class="blog__text blog-info">Я тоже считаю, что шоппинг расслабляет, как и всякий раз, когда я становлюсь слишком напряженным или напряженным. Я часто хожу за покупками. </p>
-                    <span class="text__link"><a href="">УЗНАТЬ БОЛЬШЕ</a></span>
-                    <p class="text__time">Янв 17 2020</p>
+                    <div>
+                        <h3 class="text__title"><a href="" data-modal="#more2">Лосьон с белым мускусом</a></h3>
+                    </div>
+                    <div>
+                        <p class="blog__text blog-info">Не откажите своей коже в удовольствии и побалуйте ее мягким уходом с помощью лосьона Body Lotion Musk. Продукт, созданный греческой компанией Miss Sandy, обеспечит коже самую надежную защиту от пересыхания</p>
+                    </div>
+                </div>
+                <div class="blog__bottom">
+                    <div><span class="text__link"><a href="" data-modal="#more2">УЗНАТЬ БОЛЬШЕ</a></span></div>
+                    <div>
+                        <p class="text__time">Янв 17 2020</p>
+                    </div>
                 </div>
             </div>
             <div class="blog__body">
                 <div class="blog__img">
-                    <a href=""><img src="img/blog3.png" alt=""></a>
+                    <a href="" data-modal="#more3"><img src="img/blog3.png" alt=""></a>
                 </div>
                 <div class="blog__info">
-                    <h3 class="text__title"><a href="">Косметический продуктs</a></h3>
-                    <p class="blog__text blog-info">Я тоже считаю, что шоппинг расслабляет, как и всякий раз, когда я становлюсь слишком напряженным или напряженным. Я часто хожу за покупками. </p>
-                    <span class="text__link"><a href="">УЗНАТЬ БОЛЬШЕ</a></span>
-                    <p class="text__time">Янв 17 2020</p>
+                    <div>
+                        <h3 class="text__title"><a href="" data-modal="#more3">Косметический продукт</a></h3>
+                    </div>
+                    <div>
+                        <p class="blog__text blog-info">В основе любой помады – воски, масла и красящие пигменты, но в составе матовых процент воска выше, а масел – ниже.</p>
+                    </div>
+                </div>
+                <div class="blog__bottom">
+                    <div><span class="text__link"><a href="" data-modal="#more3">УЗНАТЬ БОЛЬШЕ</a></span></div>
+                    <div>
+                        <p class="text__time">Янв 17 2020</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -182,8 +211,10 @@
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__social">
-                    <div class="footer__logo"><img src="img/footer_logo.svg" alt=""></div>
-                    <div class="footer__text">Вопреки популярному - это не просто<br> случайный текст. Она имеет </div>
+                    <div class="footer__logo">
+                        <a href=""><img src="img/footer_logo.svg" alt=""></a>
+                    </div>
+                    <div class="footer__text">Вопреки популярному - это не просто<br>случайный текст. Он не мешает</div>
                     <div class="footer__social-link">
                         <a class="social-link" href="#"><img src="img/icon.svg" alt=""></a>
                         <a class="social-link" href="#"><img src="img/icon2.svg" alt=""></a>
@@ -193,10 +224,10 @@
                 </div>
                 <ul class="footer__list">
                     <p class="list__title">Быстрые ссылки</p>
-                    <li><a class="footer__text" href="">Главная</a></li>
-                    <li><a class="footer__text" href="">Блог</a></li>
+                    <li><a class="footer__text" href="#main">Главная</a></li>
+                    <li><a class="footer__text" href="#blog">Блог</a></li>
                     <li><a class="footer__text" href="">Улица</a></li>
-                    <li><a class="footer__text" href="">Новое поступление</a></li>
+                    <li><a class="footer__text" href="#arrival">Новое поступление</a></li>
                 </ul>
                 <ul class="footer__list">
                     <p class="list__title">Поддержка</p>
@@ -207,14 +238,139 @@
                 </ul>
                 <ul class="footer__list">
                     <p class="list__title">Свяжитесь с нами</p>
-                    <li><a class="footer__text" href="">+880 1767812324</a></li>
-                    <li><a class="footer__text" href="">mb1673072@gmail.com</a></li>
+                    <li><a class="footer__text" href="">+880 937992</a></li>
+                    <li><a class="footer__text" href="">okdw1995@gmail.com</a></li>
                     <li><a class="footer__text" href="">37/1 Aleraza Market</a></li>
                 </ul>
             </div>
         </div>
     </footer>
+    <div id="room" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content room">
+                <a href="#" class="popup__close" data-close><img src="img/close.svg" alt=""></a>
+                <div class="popup__title"><span>Sorry</span></div>
+                <img class="room__img" src="img/закрыт-мал.jpg" alt="">
+                <p class="room__text">Надеемся на ваше понимание</p>
+            </div>
+        </div>
+    </div>
+    <div id="brand" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close" data-close><img src="img/close.svg" alt=""></a>
+                <div class="popup__title"><span>Лучшие бренды</span></div>
+                <div class="popup__wrapper">
+                    <div class="popup__brand">
+                        <a href="https://www.bershka.com" target="_blank"><img src="img/55.jpg" alt=""></a>
+                    </div>
+                    <div class="popup__brand">
+                        <a href="https://www.vans.com" target="_blank"><img src="img/vans.png" alt=""></a>
+                    </div>
+                    <div class="popup__brand">
+                        <a href="https://www.adidas.com" target="_blank"><img src="img/adidas.png" alt=""></a>
+                    </div>
+                    <div class="popup__brand">
+                        <a href="https://www.asics.com" target="_blank"><img src="img/asic.png" alt=""></a>
+                    </div>
+                    <div class="popup__brand">
+                        <a href="https://www.puma.com" target="_blank"><img src="img/puma.png" alt=""></a>
+                    </div>
+                    <div class="popup__brand">
+                        <a href="https://www.reebok.com" target="_blank"><img src="img/reebok.png" alt=""></a>
+                    </div>
+                    <div class="popup__brand">
+                        <a href="https://www.zara.com" target="_blank"><img src="img/zara.png" alt=""></a>
+                    </div>
+                    <div class="popup__brand">
+                        <a href="https://www.newbalance.com" target="_blank"><img src="img/nb.png" alt=""></a>
+                    </div>
+                    <div class="popup__brand">
+                        <a href="https://www.levis.com" target="_blank"><img src="img/levis.png" alt=""></a>
+                    </div>
+                    <div class="popup__brand">
+                        <a href="https://www.lacoste.com" target="_blank"><img src="img/lacoste.png" alt=""></a>
+                    </div>
+                    <div class="popup__brand">
+                        <a href="https://www.guess.com" target="_blank"><img src="img/gues.png" alt=""></a>
+                    </div>
+                    <div class="popup__brand">
+                        <a href="https://www.fila.com" target="_blank"><img src="img/fila.png" alt=""></a>
+                    </div>
+                    <div class="popup__brand">
+                        <a href="https://www.champion.com" target="_blank"><img src=/img/champ.png" alt=""></a>
+                    </div>
+                    <div class="popup__brand">
+                        <a href="https://www.converse.com" target="_blank"><img src="img/converse.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="more" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close" data-close><img src="img/close.svg" alt=""></a>
+                <div class="popup__title"><span>Духи Foog</span></div>
+                <div class="popup__img"><img src="img/blog.png" alt=""> </div>
+                <ul class="popup__info">
+                    <li><span>Классификация:</span> нишевая</li>
+                    <li><span>Тип аромата:</span> восточные</li>
+                    <li><span>Пол:</span> женские</li>
+                    <li><span>Начальная нота:</span> Ваниль, Какао, Пшеница, Сахар</li>
+                    <li><span>Нота сердца:</span> Ваниль, Какао, Пшеница, Сахар</li>
+                    <li><span>Конечная нота:</span> Ваниль, Какао, Пшеница, Сахар</li>
+                    <li><span>Сделано в:</span> США</li>
+                    <li><span>Премьера аромата:</span> 2020</li>
+                    <li><span>Страна ТМ:</span> США</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="more2" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close" data-close><img src="img/close.svg" alt=""></a>
+                <div class="popup__title"><span>White Musk</span></div>
+                <div class="popup__img"><img src="img/blog2.png" alt=""> </div>
+                <ul class="popup__info">
+                    <li><span>Классификация:</span> мускусный</li>
+                    <li><span>Тип аромата:</span> западный</li>
+                    <li><span>Пол:</span> мужские</li>
+                    <li><span>Начальная нота:</span> Цветы, Дерево, Мускус</li>
+                    <li><span>Нота сердца:</span> Цветы, Дерево, Мускус</li>
+                    <li><span>Конечная нота:</span> Цветы, Дерево, Мускус</li>
+                    <li><span>Сделано в:</span> США</li>
+                    <li><span>Премьера аромата:</span> 2012</li>
+                    <li><span>Страна ТМ:</span> США</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="more3" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#" class="popup__close" data-close><img src="img/close.svg" alt=""></a>
+                <div class="popup__title"><span>Косметический продукт</span></div>
+                <div class="popup__img"><img src="img/blog3.png" alt=""> </div>
+                <ul class="popup__info">
+                    <li><span>Классификация:</span>матовая</li>
+                    <li><span>Тип аромата:</span> клубника</li>
+                    <li><span>Пол:</span> женские</li>
+                    <li><span>Сделано в:</span> Украина</li>
+                    <li><span>Премьера продажи:</span> 2020</li>
+                    <li><span>Страна ТМ:</span> Украина</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
