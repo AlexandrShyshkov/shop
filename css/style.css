@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
     font-family: 'Lexend', 'Poppins', sans-serif;
     background-color: #efeff7;
